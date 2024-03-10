@@ -646,7 +646,6 @@ class ResultsScreen extends MusicBeatSubstate
 			loadLeftTween = FlxTween.tween(loadLeft, {x: 0}, duration, {
 				onComplete: function(twn:FlxTween) {
 				    FlxTransitionableState.skipNextTransIn = true;
-				    Mods.loadTopMod();
 					MusicBeatState.switchState(new FreeplayState());
 				},
 			ease: FlxEase.expoInOut});
@@ -708,7 +707,6 @@ class ResultsScreen extends MusicBeatSubstate
 			loadAlphaTween = FlxTween.tween(loadAlpha, {alpha: 1}, duration, {
 				onComplete: function(twn:FlxTween) {
 				    FlxTransitionableState.skipNextTransIn = true;
-				    Mods.loadTopMod();
 					MusicBeatState.switchState(new FreeplayState());
 				},
 			ease: FlxEase.sineInOut});
