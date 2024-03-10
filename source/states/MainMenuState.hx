@@ -82,7 +82,6 @@ class MainMenuState extends MusicBeatState
 		#if MODS_ALLOWED
 		Mods.pushGlobalMods();
 		#end
-		Mods.loadTopMod();
 
 		#if desktop
 		// Updating Discord Rich Presence
@@ -125,14 +124,13 @@ class MainMenuState extends MusicBeatState
 		//add(camFollow);
 		
 
-		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
+		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuBGMagenta'));
 		magenta.scrollFactor.set(0, yScroll);
 		magenta.setGraphicSize(Std.int(magenta.width * 1.175));
 		magenta.updateHitbox();
 		magenta.screenCenter();
 		magenta.visible = false;
 		magenta.antialiasing = ClientPrefs.data.antialiasing;
-		magenta.color = 0xFFfd719b;
 		add(magenta);
 		
 		
